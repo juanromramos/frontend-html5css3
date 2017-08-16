@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Menú pestañas | Juan Romero</title>
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+		body {
+			font-family: 'Varela Round', sans-serif;
+		}
+
+		main {
+			margin: 30px auto;
+			position: relative;
+		    width: 400px;
+			height: 400px;
+		}
+
+		div {
+			background-color: #AAA;
+			display: inline-block;
+		}
+
+		div input {
+			display: none;
+		}
+		div input:checked ~ label {
+			background-color: #AAA;
+		}
+		div input:checked ~ article {
+			opacity: 1;
+		}
+
+		div label {
+			padding: 10px;
+			background-color: #DDD;
+		}
+
+		div article {
+			position: absolute;
+			opacity: 0;
+			background-color: #AAA;
+			/* transition: all 1s; */
+			bottom: 0;
+			left: 0;
+			top:27px;
+			padding: 25px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div>
+			<input id='item1' name='radio' type='radio' checked></input>
+			<label for='item1'>Item 1</label>
+			<article>
+				<p>Opción 1</p>
+				<p>En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.</p>
+			</article>
+		</div>
+		<div>
+			<input id='item2' name='radio' type='radio'></input>
+			<label for='item2'>Item 2</label>
+			<article>
+				<p>Opción 2</p>
+				<p>Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados, lentejas los viernes, algún palomino de añadidura los domingos, consumían las tres partes de su hacienda.</p>
+			</article>
+		</div>
+		<div>
+			<input id='item3' name='radio' type='radio'></input>
+			<label for='item3'>Item 3</label>
+			<article>
+				<p>Opción 3</p>
+				<p>El resto della concluían sayo de velarte, calzas de velludo para las fiestas con sus pantuflos de lo mismo, los días de entre semana se honraba con su vellori de lo más fino.</p>
+			</article>
+		</div>
+	</main>
+</body>
+</html>

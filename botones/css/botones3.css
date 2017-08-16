@@ -1,0 +1,43 @@
+/* *********************
+  Meridiad Botones 3
+* *********************/
+
+input#miboton3 {
+  display: none;
+}
+
+.cont-botones3 {
+  text-align: center;
+}
+
+.cont-botones3 > label > .miboton3-menu {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
+}
+
+.miboton3-icono-linea {
+  display: block;
+  position: absolute;
+  width: 26px;
+  height: 1px;
+  background-color: #383838;
+  left: 10px;
+  top: 50%;
+  transition: 0.5s cubic-bezier(.19,1,.22,1);
+}
+
+.miboton3-icono-linea:first-child { margin-top: -12px; }
+.miboton3-icono-linea:last-child { margin-top: 12px; }
+
+.miboton3-menu:hover .miboton3-icono-linea,
+#miboton3:checked + label .miboton3-icono-linea {
+  transform: rotate(45deg);
+	margin-top: 0;
+}
+
+#miboton3:checked + label .miboton3-menu .miboton3-icono-linea:last-child {
+  transform: rotate(135deg);
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Acordeón horizontal | Juan Romero</title>
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+		body {
+			font-family: 'Varela Round', sans-serif;
+		}
+
+		main {
+			width: 400px;
+			margin: 40px auto;
+			background-color: #EEE;
+			border-radius: 5px;
+			padding: 10px;
+		}
+
+		div {
+			margin: 10px auto;
+			width: 300px;
+			background-color: #AAA;
+			padding: 5px;
+		}
+
+		div input {
+			display: none;
+		}
+
+		div input:checked ~ label {
+			background-color: white;
+		}
+
+		div input:checked ~ article {
+			height: auto;
+		}
+
+		div label {
+			display: inline-block;
+		}
+			div label:hover {
+				background-color: white;
+			}
+
+		div article {
+			height: 0;
+			overflow: hidden;
+		}
+		
+		div article div {
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div>
+			<input id='item1' name='radio' type='radio'></input>
+			<label for='item1'>Item 1</label>
+			<article>
+				<div>
+					<p>Opción Item 1</p>
+					<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+				</div>
+			</article>
+		</div>
+		<div>
+			<input id='item2' name='radio' type='radio'></input>
+			<label for='item2'>Item 2</label>
+			<article>
+				<div>
+					<p>Opción Item 2</p>
+					<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+				</div>
+			</article>
+		</div>
+		<div>
+			<input id='item3' name='radio' type='radio'></input>
+			<label for='item3'>Item 3</label>
+			<article>
+				<div>
+					<p>Opción Item 3</p>
+					<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+				</div>
+			</article>
+		</div>
+	</main>
+</body>
+</html>

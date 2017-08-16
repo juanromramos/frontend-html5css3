@@ -1,0 +1,79 @@
+/* *********************
+  Meridiad Botones 1
+* *********************/
+
+button.meridiad-botones1:focus {outline:0;}
+
+button.meridiad-botones1 {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid lightgrey;
+  background: none;
+  transition: border-color 0.1s ease-in;
+}
+
+button.meridiad-botones1:hover {
+  /*border-color: #ecab18;*/
+  border-color: #31B404;
+}
+
+button.meridiad-botones1:active {
+  border-color: black;
+}
+
+button.meridiad-botones1[data-direccion]:before,
+button.meridiad-botones1[data-direccion]:after {
+  display: inline-block;
+  content: attr(data-direccion);
+  font-size: 1.5em;
+  transition: 0.2s ease-in-out;
+}
+
+  button.izq:before, button.der:before,
+  button.arr:before, button.aba:before {
+    position: absolute;
+  }
+
+  button.izq:after, button.der:before,
+  button.arr:after, button.aba:before {
+    opacity: 0;
+  }
+
+  button.izq:after, button.der:hover::after {
+    transform: translateX(30px);
+  }
+
+  button.izq:hover::before, button.der:before {
+    transform: translateX(-30px);
+  }
+
+  button.izq:hover::before, button.der:hover::after {
+    opacity: 0;
+  }
+
+  button.izq:hover::after, button.der:hover::before {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  button.arr:after, button.aba:hover::after {
+    transform: translateY(-30px);
+  }
+
+  button.arr:hover::before, button.aba:before {
+    transform: translateY(30px);
+  }
+
+  button.arr:hover::before, button.aba:hover::after {
+    opacity: 0;
+  }
+
+  button.arr:hover::after, button.aba:hover::before {
+    transform: translateY(0px);
+    opacity: 1;
+  }

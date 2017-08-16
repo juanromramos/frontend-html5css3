@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+/* *********************
+  Meridiad Botones 4
+* *********************/
+
+.cont-botones4 {
+  text-align: center;
+  font-family: "Minimo Bold", "Lato";
+  font-weight: 600;
+  width: 50%;
+  margin: 1em auto;
+}
+
+a.meridiad-botones4 {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #33414A;
+  transition: 0.3s;
+  z-index: 2;
+  padding: 1em;
+}
+
+  .cont-botones4:hover a.meridiad-botones4 {
+    opacity: 0.2;
+  }
+
+  .cont-botones4 a.meridiad-botones4:hover {
+    opacity: 1;
+  }
+
+  .cont-botones4 a.meridiad-botones4:before {
+    content: "";
+    position: absolute;
+    top: 1.5em;
+    left: 50%;
+    width: 0;
+    /*border-top: 2px solid #DA770C;*/
+    border-top: 2px solid #8904B1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.15s ease-in-out;
+    transform: translate3d(-50%,0,0) rotate(-45deg);
+    z-index: -2;
+  }
+
+  .cont-botones4 a.meridiad-botones4:hover:before {
+    visibility: visible;
+    opacity: 1;
+    width: 62px;
+  }
+
+  .cont-botones4 a.meridiad-botones4:after {
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 1.1em;
+    position: absolute;
+    display: block;
+    background-color: #FFFFFF;
+    top: 1em;
+  }

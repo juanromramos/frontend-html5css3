@@ -1,0 +1,71 @@
+/* *********************
+  Meridiad Botones 2
+* *********************/
+
+.cont-botones2 {
+  text-align: center;
+}
+
+.cont-botones2 > div {
+  position: relative;
+  display: inline-block;
+  border: 1px solid grey;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+}
+
+.menu-icono-linea {
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 1px;
+  left: 10px;
+  top: 50%;
+}
+
+.menu-icono-linea:first-child { margin-top: -7px; }
+.menu-icono-linea:last-child { margin-top: 7px; }
+
+.menu-icono-linea:before, .menu-icono-linea:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  background: #383838;
+  transition: 0.5s ease-in-out;
+}
+
+.menu-icono-linea:nth-child(2):before, .menu-icono-linea:nth-child(2):after { transition-delay: 0.1s; }
+.menu-icono-linea:last-child:before, .menu-icono-linea:last-child:after { transition-delay: 0.2s; }
+
+.menu-icono-linea:nth-child(1):before,
+.menu-icono-linea:nth-child(3):before { left: 0px; }
+.menu-icono-linea:nth-child(1):after,
+.menu-icono-linea:nth-child(3):after { left: -200px; }
+.menu-icono-linea:nth-child(2):before { left: 200px; }
+.menu-icono-linea:nth-child(2):after { left: 0px; }
+
+.cont-botones2 > div:hover .menu-icono-linea:nth-child(1):before,
+.cont-botones2 > div:hover .menu-icono-linea:nth-child(3):before { left: 200px; }
+.cont-botones2 > div:hover .menu-icono-linea:nth-child(1):after,
+.cont-botones2 > div:hover .menu-icono-linea:nth-child(3):after { left: 0px; }
+.cont-botones2 > div:hover .menu-icono-linea:nth-child(2):before { left: 0px; }
+.cont-botones2 > div:hover .menu-icono-linea:nth-child(2):after { left: -200px; }
+
+.menu-icono-cruz {
+  display: block;
+  position: absolute;
+  background-color: grey;
+  width: 36px;
+  height: 1px;
+  top: 50%;
+  transform: rotate(45deg) scale(0.4);
+  transition: transform 0.3s;
+}
+.menu-icono-cruz:last-child { transform: rotate(-45deg) scale(0.4); }
+
+.cont-botones2 > div:hover .menu-icono-cruz { transform: rotate(45deg) scale(1); }
+.cont-botones2 > div:hover .menu-icono-cruz:last-child { transform: rotate(-45deg) scale(1); }

@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+body {
+  font-family: "Varela Round";
+}
+
+#cont-carrusel1 {
+  width: 930px;
+  height: 320px;
+  /*
+  margin: 0 auto;
+  */
+  position: relative;
+  margin-bottom: 0px;
+  background: white;
+  overflow: hidden;
+}
+
+.contenedor {
+  width: 930px;
+  height: 320px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input.control {
+  display: none;
+}
+
+label.control {
+  padding: 6px;
+  /*background: white;*/
+  background: #18ff76;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
+}
+
+label.control:hover {
+  opacity: 0.3;
+}
+
+input.control:checked + label {
+  opacity: 1;
+}
+
+#s1 { margin-left: -36px; }
+
+#s2 { margin-left: -12px; }
+
+#s3 { margin-left: 12px; }
+
+#s4 { margin-left: 36px; }
+
+#s5 { margin-left: 60px; }
+
+/*
+#s6 { margin-left: 84px; } <------------------------- añadir por cada slide. Sumar 24px
+*/
+
+#s1:hover,
+#s2:hover,
+#s3:hover,
+#s4:hover,
+#s5:hover {
+  opacity: .50;
+}
+
+#slide1:checked ~ .contenidos {
+  margin-left: 0%;
+}
+
+#slide2:checked ~ .contenidos {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ .contenidos {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ .contenidos {
+  margin-left: -300%;
+}
+
+#slide5:checked ~ .contenidos {
+  margin-left: -400%;
+}
+
+/*
+#slide6:checked ~ .contenidos { <-------------------- añadir por cada slide
+  margin-left: -500%; <------------------------------ restar -100%
+}
+*/
+
+.contenidos {
+  width: 500%; /* <---------------------------------- n slides x 100 */
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: initial;
+  /*overflow-y: hidden;*/
+  z-index: 1;
+  -webkit-transition: all 0.9s ease-in-out;
+  -moz-transition: all 0.9s ease-in-out;
+  -o-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-out;
+}
+
+div.slide {
+  width: 930px;
+  height: 320px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

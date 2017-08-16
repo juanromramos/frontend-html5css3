@@ -1,0 +1,177 @@
+/* Archivo controles.css -- INICIO */
+.boton {
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+  display: inline-block;
+  padding: .6em 1em;
+  background: rgba(147,128,108,.15);
+  color: inherit;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: .8125em;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+input[type=search] {
+  background: url("../img/icon_buscar.png") no-repeat 95% 50% #111;
+  color: #999;
+  border: 1px solid #333;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+  padding: 0.6em 1.3em 0.6em 0.9em;
+  margin: 0.1em;
+}
+/* Archivo controles.css -- FIN */
+
+html {
+	font: 400 16px/1.4 "Open Sans", sans-serif;
+	color: #111;
+}
+
+h1, h2 {
+	margin-top: 0;
+}
+
+a {
+	background-color: #46B980;
+	text-decoration: none;
+}
+
+main * {
+	box-sizing: border-box;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+header, footer {
+	/* No hay que hacer ná de momento */
+}
+
+.main-header > div {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+	padding: 1.5em;
+	text-align: center;
+	background-color: rgba(147,128,108,0.1);
+}
+
+.main-header .h-info h1 {
+	font-size: 1.8em;
+	font-weight: 600;
+	line-height: 1.1;
+	word-spacing: .08em;
+}
+
+.main-header .h-info h2 {
+	font-size: 0.8em;
+	font-weight: 300;
+}
+
+.main-header .h-info i {
+	font-family: serif;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.main-header .h-accion {
+	display: flex;
+	flex-direction: column;
+	height: 3em;
+	font-size: 0.8em;
+	align-items: center;
+}
+
+.main-header .h-accion a {
+	padding: 1.5em;
+	background-color: #46B980;
+	color: #FFF;
+}
+
+.main-body {
+	display: flex;
+	flex-direction: column;
+	padding: 1.5em;
+	flex: 1 0 auto; /* Estamos en columnas y el ancho de cada elemento lo calcula en función de su contenido */
+}
+
+.main-nav{
+	order: -1;
+}
+
+.main-content {
+	margin-top: 1.5em;
+	font-size: 0.9em;
+}
+
+.main-content h1 {
+	font-size: 1.6em;
+	font-style: italic;
+}
+
+.main-content h2 {
+	font-size: 1.3em;
+	padding-bottom: 5px;
+	border-bottom: 1px solid lightgray;
+	font-variant: small-caps;
+	font-weight: normal;
+}
+
+.main-nav, .main-ads {
+	padding: 1em;
+	text-align: center;
+	background-color: rgba(147,128,108,0.1);
+	border-radius: 3px;
+}
+
+.main-footer > div {
+	padding: 1.5rem;
+	background-color: #404040;
+	color: #AAA;
+	font-size: .85em;
+	text-align: center;
+}
+
+@media (min-width: 20em) {
+	.main-header .h-accion {
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 40em) {
+	.main-header > div {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.main-header .h-accion {
+		justify-content: flex-end;
+	}
+	.main-body {
+		flex-direction: row;
+	}
+
+	.main-content {
+		margin-top: 0;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	
+	.main-nav, .main-ads {
+		flex: 0 0 9em; /* Ni crezcas ni decrezcas, fija tu anchura en función de tu contenido (siempre 12em) */
+	}
+}

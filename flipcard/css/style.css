@@ -1,0 +1,113 @@
+/* Fuente */
+body {
+	font-family: arial;
+}
+
+/* Contenedor que encierra el div */
+section {
+	margin: 60px auto;
+	width: 300px;
+	height: 500px;
+	position: relative;
+	perspective: 600px;
+	
+	border: 2px dotted #AAF;
+}
+
+/* Cuando se activa el 'hover' sobre el div contenido por section, se activa la rotación */
+section:hover div {
+	transform: rotateY(-180deg);
+}
+
+/* Contenedor que encierra las dos caras */
+div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+/* Importante la propiedad backface-visibility para ocultar 
+el contenido cuando esté dado la vuelta */
+figure {
+	display: block;
+	position: absolute;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	
+	color: #FFF;
+}
+
+/* Imagen de fondo en el lado de la cara, para que se visualice
+la imagen al cargar el html */
+figure:first-child {
+	background-image: url('../img/cover-a.jpg');
+}
+	/* Las etiquetas img permanecen ocultas */
+	figure:first-child img {
+		display: none;
+		position: fixed;
+	}
+		/* Y si son seleccionadas mediante los enlaces
+		de la cara B, se visualizan*/
+		figure:first-child img:target{
+			display: block;
+		}
+	/* Se posiciona el banner de texto encima de las imágenes */
+	figure:first-child p {
+		position: absolute;
+		margin: 60px 0;
+		padding: 8px 0;
+		width: 100%;
+		text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+		
+		color: white;
+		background-color: rgba(150,150,150,0.5);
+	}	
+
+/* La cara B se gira desde el principio */
+figure:last-child {
+	transform: rotateY(180deg);
+
+	background: lightgrey;
+	color: black;
+}
+	/* Reglas para formatear los enlaces y el texto
+	de la cara B*/
+	figure:last-child p, div figure:last-child h3 {
+		margin: 15px;
+		font-size: 30px;
+	}
+
+	figure:last-child p:first-child {
+		text-align: right;
+		font-size: 30px;
+	}
+
+	figure:last-child p:nth-child(3) {
+		font-size: 20px;
+	}
+
+	figure:last-child p:nth-child(n+4) {
+		margin-top: 35px;
+		text-align: center;
+	}
+	
+	figure:last-child p:nth-child(1) a{
+		
+	}
+
+	figure:last-child p:nth-child(n+4) a{
+		padding: 10px;
+		text-decoration: none;
+		font-family: verdana;
+		font-size: 20px;
+		
+		color: blue;
+		background-color: darkgrey;
+	}
